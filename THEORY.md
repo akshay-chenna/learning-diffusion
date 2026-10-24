@@ -608,7 +608,7 @@ Two knobs for test-time compute follow:
 
 Reported: 97.9% Sudoku-Extreme, 86.7% Maze-Hard, 58.8% ARC-AGI-1, 12.2% ARC-AGI-2 (single trajectory), versus TRM's 87.4 / 85.3 / 44.6 / 7.8 with the same architecture.
 
-**A subtle shortcut.** Because the noise is shared, two interpolants determine the target exactly: $x_1 = \frac{(1-s)I_t - (1-t)I_s}{t-s}$. A model could in principle learn to cancel the noise instead of reasoning. At inference the same trick only reproduces its own first guess, so it cannot help; the authors find that trained models do not rely on it, since improvement with more steps rules this out (notebook 8 §3 shows the identity numerically).
+**A subtle shortcut.** Because the noise is shared, two interpolants determine the target exactly: $x_1 = \frac{(1-s)I_t - (1-t)I_s}{t-s}$. A model could in principle learn to cancel the noise instead of reasoning. At inference the same trick only reproduces its own first guess, so it cannot help; the authors find that trained models do not rely on it, since improvement with more steps rules this out (notebook 8 §8 shows the identity numerically).
 
 ### 12.6 How the three relate
 
